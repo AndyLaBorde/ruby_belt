@@ -1,0 +1,20 @@
+<a href="<%= songs_path %>">Dashboard</a>
+
+<h1>others who added <%= @song.name %> - <%= @song.artist %></h1>
+
+<table>
+	<tr>
+		<td>Name</td>
+		<td>|</td>
+		<td>Times Added</td>
+		<td>|</td>
+	</tr>
+
+	
+	<tr>
+		<td><a href=" <%= playlist_path %>"><%= @song.users.first! %></a></td>
+		<td>|</td>
+		<td><%= @song.playlists.count %></td>
+	</tr>
+	
+</table>
